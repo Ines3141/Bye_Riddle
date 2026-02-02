@@ -1,0 +1,208 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.background-container.index-bg::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url('images/lock.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.background-container.protected-bg::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url('images/pic1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.background-container.estelle-bg::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url('images/pic1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+}
+.background-container.rasmus-bg::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url('images/pic2.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* The overlay stays the same for both */
+.background-container::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+    pointer-events: none;
+}
+.centered-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+.down-arrow {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid black; /* arrow color */
+    margin: 20px auto;
+}
+
+.password-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0 60px 0;
+    z-index: 2;
+    position: relative;
+}
+
+    .password-form input[type="password"] {
+        padding: 10px;
+        font-size: 1.1rem;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .password-form button {
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        background: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+.scroll-section {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 100px 0;
+    z-index: 2;
+    position: relative;
+}
+
+.text-block {
+    margin: 60px 0;
+    padding: 40px;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 16px;
+    opacity: 0;
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.block1 {
+    background: #ff6f61;
+    color: #fff;
+    transform: rotate(-5deg) translateX(-20px);
+}
+
+.block2 {
+    background: #6ec6ff;
+    color: #222;
+    transform: rotate(8deg) translateX(30px);
+}
+
+.block3 {
+    background: #ffd54f;
+    color: #333;
+    transform: rotate(-12deg) translateY(20px);
+}
+
+.block4 {
+    background: #81c784;
+    color: #fff;
+    transform: rotate(6deg) translateY(-15px);
+}
+
+.block5 {
+    background: #ba68c8;
+    color: #fff;
+    transform: rotate(-7deg) translateX(-25px);
+}
+
+.block6 {
+    background: #ff8a65;
+    color: #fff;
+    transform: rotate(10deg) translateX(40px);
+}
+
+.block7 {
+    background: #4dd0e1;
+    color: #222;
+    transform: rotate(-9deg) translateY(25px);
+}
+
+.block8 {
+    background: #f06292;
+    color: #fff;
+    transform: rotate(5deg) translateY(-20px);
+}
+
+.block9 {
+    background: #aed581;
+    color: #333;
+    transform: rotate(-11deg) translateX(15px);
+}
+
+.block10 {
+    background: #9575cd;
+    color: #fff;
+    transform: rotate(7deg) translateX(-35px);
+}
+
+.text-block.is-visible {
+    opacity: 1;
+    transform: rotate(0) translateX(0) translateY(0);
+}
+
+@media (max-width: 600px) {
+    .text-block {
+        font-size: 1.2rem;
+        padding: 20px;
+    }
+}
