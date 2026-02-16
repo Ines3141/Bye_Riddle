@@ -3,14 +3,17 @@ if (loginForm) {
     loginForm.addEventListener('submit', function (e) {
         e.preventDefault();
         const inputPswd = document.getElementById('password').value;
-        const correctPswd_Marit = 'maritmarit';
-        const correctPswd_Estelle = 'estelle';
-        const correctPswd_Rasmus = 'rasmus';
-        if (inputPswd === correctPswd_Marit) {
+        const cleanedInput = inputPswd
+            .toLowerCase()               // convert all to lowercase
+            .replace(/[^a-z]/g, '');    // remove anything not a-z
+        const correctPswd_Marit = 'dumbledore';
+        const correctPswd_Estelle = 'jumpsuits';
+        const correctPswd_Rasmus = 'mountain';
+        if (cleanedInput === correctPswd_Marit) {
             window.location.href = 'protected.html';
-        } else if (inputPswd === correctPswd_Estelle) {
+        } else if (cleanedInput === correctPswd_Estelle) {
             window.location.href = 'estelle.html';
-        } else if (inputPswd === correctPswd_Rasmus) {
+        } else if (cleanedInput === correctPswd_Rasmus) {
             window.location.href = 'rasmus.html';
         } else {
             alert('Incorrect password. Please try again.');
