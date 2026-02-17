@@ -196,6 +196,16 @@ body, html {
     color: #fff;
     transform: rotate(7deg) translateX(-35px);
 }
+.block11 {
+    background: #ff8a65;
+    color: #fff;
+    transform: rotate(7deg) translateX(-35px);
+}
+.block12 {
+    background: #f06292;
+    color: #fff;
+    transform: rotate(7deg) translateX(-35px);
+}
 
 .text-block.is-visible {
     opacity: 1;
